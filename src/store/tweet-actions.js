@@ -5,7 +5,7 @@ export const fetchTweets = () => {
     const fetchData = async () => {
       const response = await fetch('https://tweets.free.beeceptor.com/tweets/all')
       const data = await response.json()
-    //   const data = doc.data()
+ 
       console.log(data)
       return data
     }
@@ -13,20 +13,10 @@ export const fetchTweets = () => {
       const tweetData = await fetchData()
       dispatch(
         tweetActions.getAllTweets({
-          tweets: tweetData || []
+          tweets: tweetData.data || []
         })
       )
     } catch (error) {
-    //   dispatch(
-    //       uiActions.showNotification({
-    //         status: 'error',
-    //         title: 'Failed',
-    //         message: 'Failed to fetch user data',
-    //       }),
-    //     );
-    //     setTimeout(()=>{
-    //       dispatch(uiActions.resetNotification())
-    //     },3000)
     console.log(error)
 
     }

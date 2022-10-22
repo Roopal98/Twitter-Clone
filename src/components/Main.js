@@ -1,8 +1,12 @@
+import Feeds from "./Center/Feeds"
+
 const Main = () => {
+
+
     return (
-       <div>
-           Main page
-       </div>
+      
+           <Feeds />
+       
     )
    }
    

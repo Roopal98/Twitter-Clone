@@ -1,0 +1,29 @@
+.tweetBox {
+    padding-bottom: 30px;
+    border: 1px solid lightgray;
+    border-bottom: 6px solid lightgray;
+    padding-right: 10px;
+  }
+  .tweetBox > form {
+    display: flex;
+    flex-direction: column;
+  }
+  .tweetBox__input {
+    display: flex;
+    padding: 20px;
+  }
+  .tweetBox__input > input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+  }
+  .tweetBox__input > input:focus {
+    outline: none;
+  }
+  #tweetBox__button {
+    border: none !important;
+    font-weight: 700 !important;
+    border-radius: 20px !important;
+    margin-left: auto !important;
+  }

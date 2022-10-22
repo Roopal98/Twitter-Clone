@@ -9,13 +9,14 @@ const tweetsSlice = createSlice({
     getAllTweets(state, actions) {
       const tweetDetails = actions.payload
       console.log('inside reducer')
-      console.log(tweetDetails.tweets)
+    //   console.log(tweetDetails.tweets)
       state.tweets = tweetDetails.tweets
      
     },
-    // addTweet(state, actions) {
-    //   state.tweets = actions.payload
-    // },
+    addTweet(state, actions) {
+        // const author_id = actions.payload
+      state.tweets.push(actions.payload)
+    },
     // removeTweet(state, actions) {
     //   state.uid = actions.payload
     // },
