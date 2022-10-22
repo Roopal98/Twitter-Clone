@@ -16,9 +16,6 @@ export const fetchTweets = () => {
           tweets: tweetData.data || []
         })
       )
-    } catch (error) {
-    console.log(error)
-
-    }
+    } catch (error) {console.log(error)}
   }
 }

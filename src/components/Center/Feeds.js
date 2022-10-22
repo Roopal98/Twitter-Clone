@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const Feeds = () => {
   const tweetsData = useSelector((state) => state.tweet.tweets)
-    console.log(tweetsData)
+  console.log(tweetsData)
 
   return (
     <div className="feed">
@@ -16,7 +16,7 @@ const Feeds = () => {
       <TweetBox />
       {tweetsData.length>0 && tweetsData.map((post) => (
         <Post
-            key={post.id}
+          key={post.id}
           username={post.author_id}
           text={post.text}
         />

@@ -17,10 +17,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        
+      <Route exact path='/signin' element={<Auth />}/>
         {/* <Route exact path='/' element={<ProtectedRoute user={user}><Home /></ProtectedRoute>} /> */}
         <Route path='/' element={<ProtectedRoute />}>
-        <Route exact path='/signin' element={<Auth />}/>
+        
           <Route path="home" element={<Home />} />
           {/* <Route path="main" element={<Main />} /> */}
         </Route>

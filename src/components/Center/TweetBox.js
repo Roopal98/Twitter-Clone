@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { tweetActions } from "../../store/tweetsSlice";
 import { Button } from "react-bootstrap";
-// import db from "./firebase";
 import "./TweetBox.css";
 
 function TweetBox() {

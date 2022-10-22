@@ -7,6 +7,7 @@
 //   VerifiedUser,
 // } from "@material-ui/icons";
 import React from "react";
+import { Button } from "react-bootstrap";
 import "./Post.css";
 
 function Post({username, text}) {
@@ -27,7 +28,8 @@ function Post({username, text}) {
             <p>{text}</p>
           </div>
         </div>
-        {/* <img src={image} alt="" /> */}
+        <Button type="submit"  variant="light" id="post__button">Edit</Button>
+        <Button type="submit"  variant="light" id="post__button">Delete</Button>
         {/* <div className="post__footer">
           <ChatBubbleOutline fontSize="small" />
           <Repeat fontSize="small" />

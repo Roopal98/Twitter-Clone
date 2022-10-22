@@ -36,3 +36,10 @@
   .post__avatar {
     padding: 20px;
   }
+
+  #post__button {
+    /* border: none !important; */
+    /* font-weight: 700 !important; */
+    /* border-radius: 20px !important; */
+    margin-left: auto !important;
+  }
