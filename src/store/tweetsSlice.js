@@ -20,6 +20,12 @@ const tweetsSlice = createSlice({
     removeTweet(state, actions) {
       state.tweets.splice(actions.payload,1)
     },
+    editTweet(state,actions){
+        const author_id = actions.payload.authorId
+        const text = actions.payload.text
+        const idx = state.tweets.findIndex(obj=> obj.author_id===author_id)
+        state.tweets[idx].text = text
+    }
   },
 })
 export const tweetActions = tweetsSlice.actions
