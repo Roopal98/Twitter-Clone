@@ -21,7 +21,7 @@ function Post({username, text}) {
     const removeTweet = (e) => {
         e.preventDefault();
         const removeId = data.findIndex(obj => {
-            return obj.id === username
+            return obj.author_id === username
         })
         dispatch(tweetActions.removeTweet(removeId))
     }
