@@ -26,7 +26,7 @@ const Home = () => {
     <Container fluid>
         <Row>
             <Col><Sidebar /></Col>
-            <Col sm={7} lg={8}><Main /></Col>
+            <Col><Main /></Col>
             <Col><Sidebar /></Col>
         </Row>
        

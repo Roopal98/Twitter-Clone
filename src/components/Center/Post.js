@@ -12,14 +12,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { tweetActions } from "../../store/tweetsSlice";
 import "./Post.css";
 
-function Post({key,username, text}) {
+function Post({username, text}) {
     const data = useSelector((state)=> state.tweet.tweets)
     const dispatch = useDispatch()
     // console.log('inside Post')
     const removeTweet = (e) => {
         e.preventDefault();
         const removeId = data.findIndex(obj => {
-            return obj.id === key
+            return obj.id === username
         })
         dispatch(tweetActions.removeTweet(removeId))
     }
