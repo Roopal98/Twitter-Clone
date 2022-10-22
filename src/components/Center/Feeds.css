@@ -1,8 +1,14 @@
+ body {
+  --twitter-color: #50b7f5;
+  --twitter-background: #e6ecf0;
+}
+
 .feed {
     flex: 0.4;
     border-right: lightgray 1px solid;
     min-width: fit-content;
     overflow-y: scroll;
+    width: 600px;
   }
   .feed__header {
     position: sticky;
@@ -15,7 +21,14 @@
   .feed::-webkit-scrollbar {
     display: none;
   }
+
+  .feed {
+    /* -ms-overflow-style: none; */
+    scrollbar-width: none;
+  }
+
+
   .feed__header > h2 {
     font-size: 20px;
     font-weight: 700;
-  }
+  } 

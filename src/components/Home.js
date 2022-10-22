@@ -6,6 +6,7 @@ import Main from "./Main";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchTweets } from "../store/tweet-actions";
+// import AddIcon from '@mui/icons-material/Add';
 const Home = () => {
     const dispatch = useDispatch()
     console.log('home')
@@ -15,9 +16,10 @@ const Home = () => {
 
  return (
     <Container fluid>
+        {/* <AddIcon/> */}
         <Row>
             <Col><Sidebar /></Col>
-            <Col sm={7} lg={8}><Main /></Col>
+            <Col><Main /></Col>
             <Col><Sidebar /></Col>
         </Row>
        
