@@ -6,11 +6,20 @@ import Main from "./Main";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchTweets } from "../store/tweet-actions";
+import { tweetActions } from "../store/tweetsSlice";
 const Home = () => {
     const dispatch = useDispatch()
     console.log('home')
     useEffect(()=>{
-        dispatch(fetchTweets())
+        const data = localStorage.getItem("data")
+        if(!data){
+            dispatch(fetchTweets())
+        }
+        else{
+            dispatch(tweetActions.getAllTweets({tweets:data}))
+        }
+
+        
     },[])
 
  return (

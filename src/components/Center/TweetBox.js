@@ -9,7 +9,9 @@ function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState("");
 const dispatch = useDispatch()
   const sendTweet = (e) => {
-
+    if(tweetMessage===''){
+        return;
+    }
     e.preventDefault();
 
     let author_id = Math.random()*100
