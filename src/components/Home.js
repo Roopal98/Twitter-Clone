@@ -7,13 +7,15 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchTweets } from "../store/tweet-actions";
 import { tweetActions } from "../store/tweetsSlice";
+import RightPanel from "./Right/RightPanel";
 const Home = () => {
     const dispatch = useDispatch()
     console.log('home')
     useEffect(()=>{
-        const data = localStorage.getItem("data")
+        const data = JSON.parse(localStorage.getItem("data"))
         if(!data){
             dispatch(fetchTweets())
+            console.log('fetching')
         }
         else{
             dispatch(tweetActions.getAllTweets({tweets:data}))
@@ -27,7 +29,7 @@ const Home = () => {
         <Row>
             <Col><Sidebar /></Col>
             <Col><Main /></Col>
-            <Col><Sidebar /></Col>
+            <Col><RightPanel /></Col>
         </Row>
        
         

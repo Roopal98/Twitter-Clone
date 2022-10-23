@@ -16,7 +16,7 @@ export const fetchTweets = () => {
           tweets: tweetData.data || []
         })
       )
-      localStorage.setItem("data",tweetData.data)
+      localStorage.setItem("data",JSON.stringify(tweetData.data))
     } catch (error) {console.log(error)}
   }
 }
