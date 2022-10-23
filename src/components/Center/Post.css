@@ -43,3 +43,33 @@
     /* border-radius: 20px !important; */
     margin-left: auto !important;
   }
+
+  .input{
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .input > input:focus {
+    
+    border-bottom: 1px solid gray;
+    outline: none;
+  }
+
+  .input > input {
+    flex: 1;
+    /* margin-left: 20px; */
+    /* font-size: 10px; */
+    border: none;
+  }
+  /* .tweetBox__input {
+    display: flex;
+    padding: 20px;
+  }
+  .tweetBox__input > input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 10px;
+    border: none;
+  }
+  .tweetBox__input > input:focus {
+    outline: none;
+  } */

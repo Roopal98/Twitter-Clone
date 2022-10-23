@@ -13,7 +13,7 @@ const Feeds = () => {
       <div className="feed__header">
         <h2>Home</h2>
       </div>
-      <TweetBox />
+      <TweetBox isEdit={false}/>
       {tweetsData.length>0 && tweetsData.map((post) => (
         <Post
           key={post.id}
