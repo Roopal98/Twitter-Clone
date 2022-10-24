@@ -25,11 +25,11 @@ const Home = () => {
     },[])
 
  return (
-    <Container>
+    <Container fluid>
         <Row>
-            <Col md={3} sm={3} lg={3}><Sidebar /></Col>
-            <Col md={6} sm={6} lg={6}><Main /></Col>
-            <Col md={3} sm={3} lg={3}><RightPanel /></Col>
+            <Col className='d-flex justify-content-flex-center' xs={3} md={3} sm={4} lg={3}><Sidebar /></Col>
+            <Col xs={9} md={9} sm={8} lg={6}><Main /></Col>
+            <Col xs={12} md={12} sm={12} lg={3}><RightPanel /></Col>
         </Row>
     </Container>
  )

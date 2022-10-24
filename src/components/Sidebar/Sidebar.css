@@ -81,14 +81,8 @@
     padding-left:0;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 576px) {
   .menu-itm {
       display: none;
   }
 }
-
-/* @media (min-width: 950px) {
-  .test {
-    display: none;  
-  }
-} */

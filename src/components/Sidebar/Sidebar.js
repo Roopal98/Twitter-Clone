@@ -10,6 +10,7 @@ import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import AddIcon from '@mui/icons-material/Add';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import LogoutIcon from '@mui/icons-material/Logout';
 // import { Button } from "@material-ui/core";
 const Sidebar = () => {
   return(
@@ -50,6 +51,12 @@ const Sidebar = () => {
             <span className="material-icons"><PermIdentityIcon /></span>
              <h2 className="menu-itm">Profile</h2>
         </div>
+
+        <div className="sidebarOption">
+            <span className="material-icons"><LogoutIcon/></span>
+             <h2 className="menu-itm">Logout</h2>
+        </div>
+
         <div className="sidebarOption">
             <span className="material-icons"><MoreHorizIcon /></span>
              <h2 className="menu-itm">More</h2>
