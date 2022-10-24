@@ -1,0 +1,14 @@
+
+.col-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+}
+
+#col-item-2{
+    background-color: black;
+}
+
+.col-item{
+    padding: 0px;
+}

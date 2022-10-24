@@ -61,11 +61,6 @@ const Sidebar = () => {
             <span className="material-icons"><LogoutIcon/></span>
              <h2 className="menu-itm">Logout</h2>
         </div>
-
-        <div className="sidebarOption">
-            <span className="material-icons"><MoreHorizIcon /></span>
-             <h2 className="menu-itm">More</h2>
-        </div>
         <div><button className="tweet menu-itm">Tweet</button></div>
         {/* <div><span className='test'>testing</span></div> */}
     </div>
