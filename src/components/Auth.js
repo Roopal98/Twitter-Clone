@@ -1,14 +1,15 @@
 
 import React, { useState } from "react"
+import { Col,Row } from "react-bootstrap";
 
 const Auth = () => {
     const [userData, setUserData] = useState({ email: "", password: "" });
     const [errorMessage, setErrorMessage] = useState({ value: "" }); 
 
     const handleInputChange = (e) => {
-        setUserData((prevState) => {
+        setUserData(() => {
           return {
-            ...prevState,
+            ...userData,
             [e.target.name]: e.target.value,
           };
         });
@@ -16,26 +17,35 @@ const Auth = () => {
     
       const handleSubmit = (e) => {
         e.preventDefault();
-        let validPassword = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]$")
-        console.log(userData.password)
-        //if username or password field is empty, return error message
+        var validPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+        console.log(userData)
         if (userData.username === "" || userData.password === "") {
           setErrorMessage(() => ({
             value: "Empty username/password field",
           }))
-        } else if (userData.password=='Roopal') {
-          //Signin Success
+        } else if (userData.password.match(validPassword)) {
+        
           console.log('success')
           localStorage.setItem("isAuthenticated", "true");
           window.location.pathname = "/home";
         } else {
-          //If credentials entered is invalid
+    
           setErrorMessage(() => ({ value: "Invalid username/password" }));
         }
       };
 
   return (
     <div className="Auth-form-container">
+      <Row>
+      <Col className="d-flex align-items-center justify-content-center">
+      <div className="login-bg">
+        <div>Follow your interests.</div>
+        <div>Hear what people are talking about.</div>
+        <div>Join the conversation.</div>
+
+      </div>
+      </Col>
+      <Col className="d-flex align-items-center justify-content-center">
       <form className="Auth-form">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
@@ -72,6 +82,10 @@ const Auth = () => {
           </p> */}
         </div>
       </form>
+      </Col>
+      </Row>
+      
+      
     </div>
   )
 }

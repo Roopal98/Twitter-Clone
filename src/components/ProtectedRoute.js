@@ -19,6 +19,7 @@ const ProtectedRoute = ({ redirectPath = '/signin', children,}) => {
   const isAuthenticated = localStorage.getItem("isAuthenticated")?true:false;
   console.log('protected')
   if (!isAuthenticated) {
+    console.log('moving to signin')
     return <Navigate to={redirectPath} replace />;
   }
 
