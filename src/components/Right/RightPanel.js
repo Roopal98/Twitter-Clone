@@ -3,6 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import "./RightPanel.css";
 import { useSelector } from "react-redux";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
+import SettingsIcon from '@mui/icons-material/Settings';
 const RightPanel = () => {
   const [filter,setFilter] = useState('')
   const [filteredTweets,setFilteredTweets] = useState([])
@@ -33,7 +34,7 @@ const RightPanel = () => {
         <input placeholder="Search Twitter" value={filter} type="text" onChange={(e)=>setFilter(e.target.value)}/>
       </div>
       <div className="widgets__widgetContainer">
-        <h5>What's Happening?</h5>
+        <h5>Trend's for you <SettingsIcon/></h5>
         <ListGroup variant="flush">
           {filteredTweets.length>0 &&  filteredTweets.map((obj)=>
             <ListGroupItem key={obj.author_id}>

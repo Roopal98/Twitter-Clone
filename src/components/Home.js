@@ -27,9 +27,9 @@ const Home = () => {
  return (
     <Container>
         <Row>
-            <Col md={3} sm={3}><Sidebar /></Col>
-            <Col md={6} sm={6}><Main /></Col>
-            <Col md={3} sm={3}><RightPanel /></Col>
+            <Col md={3} sm={3} lg={3}><Sidebar /></Col>
+            <Col md={6} sm={6} lg={6}><Main /></Col>
+            <Col md={3} sm={3} lg={3}><RightPanel /></Col>
         </Row>
     </Container>
  )

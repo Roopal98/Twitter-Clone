@@ -44,8 +44,13 @@ function Post({username, text}) {
             <div className="post__headerText">
               <h3>
                 {/* {displayName}{" "} */}
+                <span><img
+              src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+              alt=""
+            /></span>
+                <span className="userName">&nbsp;&nbsp;Rohit Khatana</span>
                 <span className="post__headerSpecial">
-                  {username}
+                  @{username} <span>&#183;</span> 3m
                 </span>
               </h3>
             </div>
@@ -60,9 +65,9 @@ function Post({username, text}) {
                         </div>}
             </div>
           </div>
-          {!isEdit && <Button type="submit"  className='material-icons' variant="none" onClick={()=>setIsEdit(true)}><EditIcon/></Button>}
+          {!isEdit && <span className='material-icons'><EditIcon onClick={()=>setIsEdit(true)}/></span>}
           {isEdit && <Button type="submit"   onClick={submitTweet}>Tweet</Button>}
-          <Button type="submit"  variant="none" className="material-icons"  onClick={removeTweet}><DeleteIcon/></Button>
+          <span className='material-icons'><DeleteIcon onClick={removeTweet}/></span>
           <span className='material-icons'><RepeatIcon/></span>
           <span className='material-icons'><FavoriteBorderIcon/></span>
           <span className='material-icons'><UploadIcon/></span>

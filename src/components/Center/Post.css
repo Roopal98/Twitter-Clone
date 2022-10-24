@@ -28,6 +28,7 @@
   .post__headerDescription {
     font-size: 15px;
     margin-bottom: 20px;
+    color: black;
   }
   .post__body {
     flex: 1;
@@ -81,3 +82,9 @@
   .tweetBox__input > input:focus {
     outline: none;
   } */
+
+
+  .post__headerText img {
+    border-radius: 50%;
+    height: 40px;
+  }
