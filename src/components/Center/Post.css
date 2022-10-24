@@ -69,20 +69,19 @@
     padding-left: 35px;
     /* padding: 50px; */
   }
-  /* .tweetBox__input {
-    display: flex;
-    padding: 20px;
-  }
-  .tweetBox__input > input {
-    flex: 1;
-    margin-left: 20px;
-    font-size: 10px;
+ 
+  .tweetBox__tweetButton {
+    background-color: var(--twitter-color);
     border: none;
-  }
-  .tweetBox__input > input:focus {
-    outline: none;
-  } */
-
+    color: white;
+    font-weight: 900;
+  
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+  }  
 
   .post__headerText img {
     border-radius: 50%;

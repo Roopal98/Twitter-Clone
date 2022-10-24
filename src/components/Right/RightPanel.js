@@ -39,7 +39,7 @@ const RightPanel = () => {
         <input placeholder="Search Twitter" value={filter} type="text" onChange={(e)=>setFilter(e.target.value)}/>
       </div>
       <div className="widgets__widgetContainer">
-        <h4>What’s happening</h4>
+        <h5>What’s happening?</h5>
         <ListGroup variant="flush">
           {filteredTweets.length>0 &&  filteredTweets.map((obj)=>
             <ListGroupItem key={obj.author_id}>

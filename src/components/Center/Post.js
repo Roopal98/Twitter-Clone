@@ -66,7 +66,7 @@ function Post({username, text}) {
             </div>
           </div>
           {!isEdit && <span className='material-icons'><EditIcon onClick={()=>setIsEdit(true)}/></span>}
-          {isEdit && <Button type="submit"   onClick={submitTweet}>Tweet</Button>}
+          {isEdit && <Button type="submit" className='tweetBox__tweetButton'  onClick={submitTweet}>Tweet</Button>}
           <span className='material-icons'><DeleteIcon onClick={removeTweet}/></span>
           <span className='material-icons'><RepeatIcon/></span>
           <span className='material-icons'><FavoriteBorderIcon/></span>
