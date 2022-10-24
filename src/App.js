@@ -16,7 +16,6 @@ function App() {
   // setAuth(isAuthenticated)
   console.log('app.js')
   return (
-    <Container>
       <Routes>
       <Route exact path='/signin' element={<Auth />}/>
         {/* <Route exact path='/' element={<ProtectedRoute user={user}><Home /></ProtectedRoute>} /> */}
@@ -25,11 +24,7 @@ function App() {
           <Route path="home" element={<Home />} />
           {/* <Route path="main" element={<Main />} /> */}
         </Route>
-          
-
-
       </Routes>
-    </Container>
   );
 }
 
