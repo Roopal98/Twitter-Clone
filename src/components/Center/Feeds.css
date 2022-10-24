@@ -7,8 +7,9 @@
     flex: 0.4;
     /* border-right: lightgray 1px solid; */
     /* min-width: fit-content; */
-    overflow-y: scroll;
+    overflow-y: scroll !important;
     width: 600px;
+    height: 100vh;
   }
   .feed__header {
     position: sticky;
@@ -23,7 +24,7 @@
   }
 
   .feed {
-    /* -ms-overflow-style: none; */
+    -ms-overflow-style: none;
     scrollbar-width: none;
   }
 

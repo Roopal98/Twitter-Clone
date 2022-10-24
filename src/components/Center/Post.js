@@ -10,6 +10,11 @@ import React, { useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { tweetActions } from "../../store/tweetsSlice";
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import UploadIcon from '@mui/icons-material/Upload';
+import RepeatIcon from '@mui/icons-material/Repeat';
 import "./Post.css";
 
 function Post({username, text}) {
@@ -55,15 +60,12 @@ function Post({username, text}) {
                         </div>}
             </div>
           </div>
-          {!isEdit && <Button type="submit"  variant="light" id="post__button" onClick={()=>setIsEdit(true)}>Edit</Button>}
-          {isEdit && <Button type="submit"  variant="light" id="post__button" onClick={submitTweet}>Tweet</Button>}
-          <Button type="submit"  variant="light" id="post__button" onClick={removeTweet}>Delete</Button>
-          {/* <div className="post__footer">
-            <ChatBubbleOutline fontSize="small" />
-            <Repeat fontSize="small" />
-            <FavoriteBorder fontSize="small" />
-            <Publish fontSize="small" />
-          </div> */}
+          {!isEdit && <Button type="submit"  className='material-icons' variant="none" onClick={()=>setIsEdit(true)}><EditIcon/></Button>}
+          {isEdit && <Button type="submit"   onClick={submitTweet}>Tweet</Button>}
+          <Button type="submit"  variant="none" className="material-icons"  onClick={removeTweet}><DeleteIcon/></Button>
+          <span className='material-icons'><RepeatIcon/></span>
+          <span className='material-icons'><FavoriteBorderIcon/></span>
+          <span className='material-icons'><UploadIcon/></span>
         </div>
       </div>
     </>

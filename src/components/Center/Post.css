@@ -61,6 +61,13 @@
     border: none;
     width:90%;
   }
+
+  .material-icons{
+    justify-content: space-around;
+    padding-right: 35px;
+    padding-left: 35px;
+    /* padding: 50px; */
+  }
   /* .tweetBox__input {
     display: flex;
     padding: 20px;
