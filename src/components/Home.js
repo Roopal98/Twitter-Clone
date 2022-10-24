@@ -25,7 +25,7 @@ const Home = () => {
     },[])
 
  return (
-    <Container fluid>
+    <Container>
         <Row>
             <Col className='d-flex justify-content-flex-center' xs={3} md={3} sm={4} lg={3}><Sidebar /></Col>
             <Col xs={9} md={6} sm={8} lg={6}><Main /></Col>
