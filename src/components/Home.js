@@ -25,15 +25,12 @@ const Home = () => {
     },[])
 
  return (
-    <Container fluid>
+    <Container>
         <Row>
-            <Col><Sidebar /></Col>
-            <Col><Main /></Col>
-            <Col><RightPanel /></Col>
+            <Col md={3} sm={3}><Sidebar /></Col>
+            <Col md={6} sm={6}><Main /></Col>
+            <Col md={3} sm={3}><RightPanel /></Col>
         </Row>
-       
-        
-
     </Container>
  )
 }
