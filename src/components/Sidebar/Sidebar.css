@@ -1,14 +1,14 @@
 .sidebar{
-    width: 300px;
-    min-width: 250px;
-    padding: 20px 20px;
-    margin: 20px auto 0 auto;
+    /* width: 300px; */
+    /* min-width: 250px; */
+    /* padding: 20px 20px; */
+    /* margin: 20px auto 0 auto; */
     /* box-shadow: 0 0 6px hsl(210 14% 90%); */
     height: 650px;
   }
 
   .tweet{
-    width: 100%;
+    width: 80%;
     height: 50px;
     background-color: hsl(203, 89%, 64%);
     border: none;
@@ -79,4 +79,10 @@
   .padding-0{
     padding-right:0;
     padding-left:0;
+}
+
+@media only screen and (max-width: 576px) {
+  .menu-itm {
+      display: none;
+  }
 }

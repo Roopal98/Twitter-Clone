@@ -10,93 +10,65 @@ import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import AddIcon from '@mui/icons-material/Add';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { useDispatch } from "react-redux";
 // import { Button } from "@material-ui/core";
 const Sidebar = () => {
+    const logout = () => {
+        localStorage.removeItem('isAuthenticated')
+        window.location.pathname = "/signin";
+    }
   return(
 
     <div className="sidebar padding-0">
         <i className="fab fa-twitter"><TwitterIcon/></i>
         <div className="sidebarOption active">
             <span className="material-icons"><HomeIcon/></span>
-             <h2>Home</h2>
+             <h2 className="menu-itm">Home</h2>
         </div>
 
         <div className="sidebarOption">
             <span className="material-icons"><SearchIcon /></span>
-             <h2>Explore</h2>
+             <h2 className="menu-itm">Explore</h2>
         </div>
 
         <div className="sidebarOption">
             <span className="material-icons"><NotificationsNoneIcon /></span>
-             <h2>Notifications</h2>
+             <h2 className="menu-itm">Notifications</h2>
         </div>
 
         <div className="sidebarOption">
             <span className="material-icons"><MailOutlineIcon /></span>
-             <h2>Messages</h2>
+             <h2 className="menu-itm">Messages</h2>
         </div>
 
         <div className="sidebarOption">
             <span className="material-icons"><BookmarkBorderIcon /></span>
-             <h2>Bookmarks</h2>
+             <h2 className="menu-itm">Bookmarks</h2>
         </div>
 
         <div className="sidebarOption">
             <span className="material-icons"><ListAltIcon /></span>
-             <h2>Lists</h2>
+             <h2 className="menu-itm">Lists</h2>
         </div>
 
         <div className="sidebarOption">
             <span className="material-icons"><PermIdentityIcon /></span>
-             <h2>Profile</h2>
+             <h2 className="menu-itm">Profile</h2>
         </div>
+
+        <div className="sidebarOption" onClick={logout}>
+            <span className="material-icons"><LogoutIcon/></span>
+             <h2 className="menu-itm">Logout</h2>
+        </div>
+
         <div className="sidebarOption">
             <span className="material-icons"><MoreHorizIcon /></span>
-             <h2>More</h2>
+             <h2 className="menu-itm">More</h2>
         </div>
-        <div><button className="tweet">Tweet</button></div>
+        <div><button className="tweet menu-itm">Tweet</button></div>
+        {/* <div><span className='test'>testing</span></div> */}
     </div>
-    // <div className="sidebar">
-    //     <div className="link">
-    //         <i><HomeIcon /></i>
-    //         <h2>Home</h2>
-    //     </div>
-    //     <div className="link">
-    //         <span><SearchIcon /></span>
-    //         <h2> Explore</h2>
-    //     </div>
-    //     <div className="link">
-    //     <span><MailOutlineIcon /></span>
-    //         <h2>Messages</h2>
-    //     </div>
-    //     <div className="link">
-    //     <span><NotificationsNoneIcon /></span>
-    //         <h2>Notifications</h2>
-    //     </div>
-    //     <div className="link">
-    //     <span><BookmarkBorderIcon /></span>
-    //         <h2>Bookmarks</h2>
-    //     </div>
-    //     <div className="link">
-    //     <span><ListAltIcon /></span>
-    //         <h2>Lists</h2>
-    //     </div>
-    //     <div className="link">
-    //         <span><PermIdentityIcon /></span>
-    //         <h2>Profile</h2>
-    //     </div>
-    //     {/* <SidebarLink text="Home" active={true} Icon={HomeIcon} />
-    //     <SidebarLink text="Explore" Icon={SearchIcon} />
-    //     <SidebarLink text="Notifications" Icon={NotificationsNoneIcon} />
-    //     <SidebarLink text="Messages" Icon={MailOutlineIcon} />
-    //     <SidebarLink text="Bookmarks" Icon={BookmarkBorderIcon} />
-    //     <SidebarLink text="Lists" Icon={ListAltIcon} />
-    //     <SidebarLink text="Profile" Icon={PermIdentityIcon} />
-    //     <SidebarLink text="More" Icon={MoreHorizIcon}/> */}
-    //     {/* <Button id="tweet">
-    //         Tweet
-    //     </Button> */}
-    // </div>
   );
 }
 

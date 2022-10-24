@@ -8,7 +8,7 @@
     /* border-right: lightgray 1px solid; */
     /* min-width: fit-content; */
     overflow-y: scroll !important;
-    width: 600px;
+    /* width: 600px; */
     height: 100vh;
   }
   .feed__header {
