@@ -11,8 +11,13 @@ import AddIcon from '@mui/icons-material/Add';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { useDispatch } from "react-redux";
 // import { Button } from "@material-ui/core";
 const Sidebar = () => {
+    const logout = () => {
+        localStorage.removeItem('isAuthenticated')
+        window.location.pathname = "/signin";
+    }
   return(
 
     <div className="sidebar padding-0">
@@ -52,7 +57,7 @@ const Sidebar = () => {
              <h2 className="menu-itm">Profile</h2>
         </div>
 
-        <div className="sidebarOption">
+        <div className="sidebarOption" onClick={logout}>
             <span className="material-icons"><LogoutIcon/></span>
              <h2 className="menu-itm">Logout</h2>
         </div>
